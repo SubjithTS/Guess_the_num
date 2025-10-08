@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Number</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/static/styles.css">
+    <body>
     <div id="game">
         <h1>Guess The Number</h1>
         
+        <div id="login-section">
+            <h3>Enter your username to join the game:</h3>
+            <input type="text" id="username-input" placeholder="Your username" maxlength="20">
+            <button id="join-btn">Join Game</button>
+        </div>
+        
+        <div id="game-section" style="display: none;">
+            <div id="user-info">
+                Playing as: <strong id="current-user">Anonymous</strong>
+            </div>
+            
+            <div id="messages"></div>
+            
+            <div id="input-section">
+                <input type="number" id="guess-input" placeholder="Enter your guess (1-100)" min="1" max="100">
+                <button id="guess-btn">Guess</button>
+                
+                <div style="margin-top: 10px;">
+                    <input type="text" id="chat-input" placeholder="Or send a chat message">
+                    <button id="chat-btn">Chat</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
-    <script src="static/chats.js"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>
