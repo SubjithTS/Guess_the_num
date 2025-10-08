@@ -111,7 +111,7 @@ def handle_guess(data):
             emit('guess_result', {
                 'success': True,
                 'correct': False,
-                'message': f'Your guess {guess} is too {direction}. {feedback}',
+                'message': f'Your guess is {guess}. Go {direction}. {feedback}',
                 'guess': guess,
                 'feedback': feedback
             })
